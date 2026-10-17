@@ -6,7 +6,7 @@ const headlineVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.045,
+      staggerChildren: 0.025,
     },
   },
 };
@@ -14,64 +14,98 @@ const headlineVariants = {
 const letterVariants = {
   hidden: {
     opacity: 0,
-    y: 18,
-    filter: "blur(5px)",
+    y: 12,
   },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.45,
+      duration: 0.35,
       ease: "easeOut",
     },
   },
 };
 
-function AnimatedHeadline({ text, reduceMotion }) {
+function AnimatedHeadline({ text, reduceMotion, isArabic }) {
   if (reduceMotion) {
     return <>{text}</>;
   }
 
-  function AnimatedHeadline({ text, reduceMotion, isArabic }) {
-    // Arabic letters need to stay together for correct shaping.
-    if (reduceMotion || isArabic) {
-      return (
-        <motion.span initial={false} animate={{ opacity: 1, y: 0 }}>
-          {text}
-        </motion.span>
-      );
-    }
-
+  // Arabic must remain one text node to preserve letter connections.
+  if (isArabic) {
     return (
       <motion.span
-        variants={headlineVariants}
-        initial="hidden"
-        animate="visible"
-        aria-label={text}
-        className="inline"
+        key="arabic-headline"
+        className="inline-block"
+        initial={{ clipPath: "inset(0 0 0 100%)" }}
+        animate={{ clipPath: "inset(0 0 0 0%)" }}
+        transition={{
+          duration: 1.2,
+          ease: "easeInOut",
+        }}
       >
-        {text.split("").map((letter, index) => (
-          <motion.span
-            key={`${letter}-${index}`}
-            variants={letterVariants}
-            aria-hidden="true"
-            className="inline-block whitespace-pre"
-          >
-            {letter}
-          </motion.span>
-        ))}
+        {text}
       </motion.span>
     );
   }
+
+  // English: reveal each character in sequence.
+  return (
+    <motion.span
+      key="english-headline"
+      variants={headlineVariants}
+      initial="hidden"
+      animate="visible"
+      aria-label={text}
+      className="inline"
+    >
+      {text.split("").map((letter, index) => (
+        <motion.span
+          key={`${letter}-${index}`}
+          variants={letterVariants}
+          aria-hidden="true"
+          className="inline-block whitespace-pre"
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
 }
 
 function Hero() {
   const { t, i18n } = useTranslation();
   const reduceMotion = useReducedMotion();
-  const isArabic = (i18n.resolvedLanguage || "en").startsWith("ar");
 
+  const language = i18n.resolvedLanguage || i18n.language || "en";
+  const isArabic = language.startsWith("ar");
   const title = t("hero.title");
+
+  // Keep the rest of the text in sync with the headline.
+  const headlineDuration = reduceMotion
+    ? 0
+    : isArabic
+      ? 1.2
+      : 0.35 + Math.max(0, title.length - 1) * 0.025;
+
+  const descriptionDelay = headlineDuration + 0.15;
+  const buttonsDelay = descriptionDelay + 0.4;
+
+  function reveal(delay = 0) {
+    if (reduceMotion) {
+      return {};
+    }
+
+    return {
+      initial: { opacity: 0, y: 12 },
+      animate: { opacity: 1, y: 0 },
+      transition: {
+        duration: 0.4,
+        delay,
+        ease: "easeOut",
+      },
+    };
+  }
 
   return (
     <section className="overflow-hidden bg-flower-champagne">
@@ -79,34 +113,30 @@ function Hero() {
         {/* Text content */}
         <div className={isArabic ? "text-right" : "text-left"}>
           <motion.p
-            initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            {...reveal(0)}
             className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-flower-rose sm:text-sm"
           >
             {t("hero.eyebrow")}
           </motion.p>
 
-          <h1 className="max-w-xl font-display text-5xl leading-[1.05] text-flower-burgundy sm:text-6xl lg:text-7xl">
-            <AnimatedHeadline text={title} reduceMotion={reduceMotion} />
+          <h1 className="max-w-xl font-display text-5xl leading-[1.15] text-flower-burgundy sm:text-6xl lg:text-7xl">
+            <AnimatedHeadline
+              text={title}
+              reduceMotion={reduceMotion}
+              isArabic={isArabic}
+            />
           </h1>
 
           <motion.p
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            {...reveal(descriptionDelay)}
             className="mt-6 max-w-lg text-base leading-8 text-flower-ink/75 sm:text-lg"
           >
             {t("hero.description")}
           </motion.p>
 
           <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className={`mt-9 flex flex-wrap gap-4 ${
-              isArabic ? "justify-start" : "justify-start"
-            }`}
+            {...reveal(buttonsDelay)}
+            className="mt-9 flex flex-wrap justify-start gap-4"
           >
             <Link
               to="/collection"
@@ -128,7 +158,11 @@ function Hero() {
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, scale: 0.97, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.15,
+            ease: "easeOut",
+          }}
           className="relative mx-auto w-full max-w-lg"
         >
           <div className="absolute -inset-4 rounded-t-full border border-flower-gold/50" />
