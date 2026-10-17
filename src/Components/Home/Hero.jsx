@@ -167,7 +167,7 @@ function Hero() {
         >
           <div className="absolute -inset-4 rounded-t-full border border-flower-gold/50" />
 
-          <div className="relative aspect-[4/5] overflow-hidden rounded-t-full bg-[#E9DCD0]">
+          <div className="relative aspect-4/5 overflow-hidden rounded-t-full bg-[#E9DCD0]">
             <img
               src="/images/hero-bouquet.jpg"
               alt={t("hero.imageAlt")}
