@@ -1,11 +1,14 @@
+import Hero from "./../Components/Home/Hero";
 import Navbar from "./../Components/Layout/Navbar";
 
 function Home() {
   return (
     <>
       <Navbar />
-
-      <main>{/* Hero section comes next */}</main>
+      <main>
+        <Hero />
+        {/* Featured collection comes next */}
+      </main>
     </>
   );
 }
