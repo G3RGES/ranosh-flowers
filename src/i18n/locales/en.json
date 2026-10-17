@@ -2,5 +2,14 @@
   "nav": {
     "home": "Home",
     "collection": "Our Collection"
+  },
+  "hero": {
+    "eyebrow": "Flowers, thoughtfully arranged",
+    "title": "Every Bloom Tells a Story",
+    "description": "From meaningful little gestures to unforgettable celebrations, discover floral arrangements made to turn moments into memories.",
+    "primaryCta": "Explore the Collection",
+    "secondaryCta": "Wedding & Events",
+    "imageAlt": "An elegant bouquet of burgundy roses wrapped in champagne paper",
+    "imageCaption": "Made with love"
   }
 }
