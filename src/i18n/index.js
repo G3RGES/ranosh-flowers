@@ -29,9 +29,24 @@ i18n
     },
   });
 
-i18n.on("languageChanged", (language) => {
-  document.documentElement.lang = language;
-  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+function syncDocumentLanguage(language) {
+  const currentLanguage = language || i18n.resolvedLanguage || "en";
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage.startsWith("ar")
+    ? "rtl"
+    : "ltr";
+}
+
+// Apply the direction immediately if initialization has already completed.
+if (i18n.isInitialized) {
+  syncDocumentLanguage(i18n.resolvedLanguage);
+}
+
+i18n.on("initialized", () => {
+  syncDocumentLanguage(i18n.resolvedLanguage);
 });
+
+i18n.on("languageChanged", syncDocumentLanguage);
 
 export default i18n;
