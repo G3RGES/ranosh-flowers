@@ -1,10 +1,17 @@
+import { Routes, Route } from "react-router";
+
+import MainLayout from "./Components/Layout/MainLayout";
 import Home from "./Pages/Home";
+import Collection from "./Pages/Collection";
 
 function App() {
   return (
-    <main className="min-h-screen bg-flower-cream p-8">
-      <Home />
-    </main>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+      </Route>
+    </Routes>
   );
 }
 
