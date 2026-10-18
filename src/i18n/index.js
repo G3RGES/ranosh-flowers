@@ -14,12 +14,14 @@ i18n
       ar: { translation: ar },
     },
 
-    fallbackLng: "en",
-
-    supportedLngs: ["en", "ar"],
+    // Arabic is the default for new visitors.
+    lng: "ar",
+    fallbackLng: "ar",
+    supportedLngs: ["ar", "en"],
 
     detection: {
-      order: ["localStorage", "navigator"],
+      // Respect a language the visitor explicitly selected.
+      order: ["localStorage"],
       caches: ["localStorage"],
       lookupLocalStorage: "flower-store-language",
     },
