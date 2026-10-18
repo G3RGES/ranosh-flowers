@@ -1,7 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "collection": "Our Collection"
+    "collection": "Our Collection",
+    "about": "Our Story"
   },
   "hero": {
     "eyebrow": "Flowers, thoughtfully arranged",
@@ -10,6 +11,80 @@
     "primaryCta": "Explore the Collection",
     "secondaryCta": "Wedding & Events",
     "imageAlt": "An elegant bouquet of burgundy roses wrapped in champagne paper",
-    "imageCaption": "Made with love"
+    "imageCaption": "Made with love",
+    "contactCta": "Have a Flower-Filled Idea?"
+  },
+
+  "collection": {
+    "eyebrow": "THE ART OF FLOWERS",
+    "title": "Our Featured Bouquets",
+    "description": "Thoughtfully arranged flowers for the moments that matter.",
+    "viewAll": "View All Bouquets",
+    "discover": "Discover Bouquet",
+    "pageTitle": "Our Flower Collection",
+    "pageDescription": "Explore our floral arrangements, thoughtfully created to make every occasion feel special.",
+    "filterLabel": "Filter collection",
+    "filters": {
+      "all": "All",
+      "bouquets": "Bouquets",
+      "packages": "Weddings & Events"
+    },
+    "empty": "Nothing to display here just yet."
+  },
+  "contact": {
+    "eyebrow": "MADE WITH LOVE",
+    "title": "Have Something Special in Mind?",
+    "description": "Every flower tells a story. Tell us yours, and let's create something beautiful together.",
+    "cta": "Let's Talk on WhatsApp"
+  },
+  "products": {
+    "burgundyEdit": {
+      "name": "The Burgundy Edit",
+      "description": "Rich roses wrapped in timeless elegance."
+    },
+    "softRomance": {
+      "name": "Soft Romance",
+      "description": "Delicate blooms in soft, romantic tones."
+    },
+    "theClassic": {
+      "name": "The Classic",
+      "description": "A graceful arrangement for every occasion."
+    },
+    "graduation": {
+      "name": "The Golden Milestone",
+      "description": "A joyful mix of golden roses and blue blooms to celebrate a milestone worth remembering."
+    }
+  },
+  "packages": {
+    "burgundyWedding": {
+      "name": "The Burgundy Wedding",
+      "description": "Romantic wedding florals in rich burgundy, ivory, and champagne tones."
+    },
+    "romanticWedding": {
+      "name": "The Romantic Setting",
+      "description": "Soft blush flowers and flowing drapery for an elegant celebration."
+    }
+  },
+  "wedding": {
+    "eyebrow": "FOR YOUR SPECIAL DAY",
+    "title": "Weddings & Events",
+    "description": "From romantic bridal bouquets to elegant event arrangements, we're here to help make your special moments unforgettable."
+  },
+  "about": {
+    "eyebrow": "THE HEART BEHIND EVERY BLOOM",
+    "title": "More Than Flowers. Moments That Matter.",
+    "description": "Every arrangement begins with a feeling. From joyful celebrations to life's most meaningful moments, flowers have a beautiful way of saying what words sometimes cannot.",
+    "signature": "Made with love, arranged with care.",
+    "imageAlt": "A florist carefully arranging a bouquet of burgundy, blush, and ivory flowers",
+    "imageCaption": "A little beauty in every detail."
+  },
+  "footer": {
+    "tagline": "Thoughtfully arranged flowers for life's most beautiful moments.",
+    "explore": "EXPLORE",
+    "contactTitle": "LET'S CONNECT",
+    "contactDescription": "Have an idea in mind? We'd love to hear what you're dreaming of.",
+    "whatsapp": "Say Hello on WhatsApp",
+    "rights": "All rights reserved.",
+    "signature": "Made with love, arranged with care."
   }
 }
