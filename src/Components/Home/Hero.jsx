@@ -146,10 +146,12 @@ function Hero() {
             </Link>
 
             <a
-              href="#wedding-services"
-              className="inline-flex items-center justify-center rounded-full border border-flower-burgundy/30 px-7 py-3.5 text-sm font-medium text-flower-burgundy transition duration-300 hover:border-flower-burgundy hover:bg-flower-burgundy/5"
+              href="https://wa.me/+201280287326"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-flower-burgundy/30 px-7 py-3.5 text-sm font-medium text-flower-burgundy transition duration-300 hover:border-flower-burgundy hover:bg-flower-burgundy/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-flower-burgundy"
             >
-              {t("hero.secondaryCta")}
+              {t("hero.contactCta")}
             </a>
           </motion.div>
         </div>
