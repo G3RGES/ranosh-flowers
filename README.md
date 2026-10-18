@@ -1,19 +1,130 @@
-# React + Vite
+# Ranosh Flowers 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A bilingual floral website showcasing bouquets, wedding arrangements, and flowers for life's special moments.
 
-Currently, two official plugins are available:
+**Live Website:** [ranosh-flowers.vercel.app](https://ranosh-flowers.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with React and Tailwind CSS, featuring an elegant visual design, smooth animations, and Arabic-first support.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Arabic and English:** Switch languages with a saved language preference.
+- **RTL and LTR support:** Layout direction adapts to the selected language.
+- **Responsive design:** Optimized for desktop and mobile.
+- **Featured collection:** Highlights selected bouquets and wedding packages.
+- **Dynamic catalog:** Browse bouquets and wedding packages by category.
+- **WhatsApp integration:** Contact the business directly about arrangements.
+- **Reusable components:** Shared layout, navigation, and footer.
+- **SEO metadata:** Page title, description, favicon, and social-sharing metadata.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript (JSX)
+- Tailwind CSS v4
+- React Router
+- i18next and react-i18next
+- Motion for React
+- Lucide React
+- React Icons
+- Fontsource
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+```bash
+git clone <your-repository-url>
+cd <your-project-folder>
+npm install
+npm run dev
+```
+
+Open the local URL provided by Vite.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```text
+public/
+└── images/
+
+src/
+├── components/
+│   ├── layout/
+│   ├── home/
+│   └── Collection/
+├── data/
+│   ├── products.js
+│   └── packages.js
+├── i18n/
+│   ├── index.js
+│   └── locales/
+│       ├── ar.json
+│       └── en.json
+├── pages/
+│   ├── Home.jsx
+│   └── Collection.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+index.html
+package.json
+```
+
+## 🌐 Internationalization
+
+The website uses i18next for Arabic and English translations.
+
+- Arabic is the default language.
+- Layout direction updates automatically between RTL and LTR.
+- Language preference is saved in local storage.
+- Visible text is managed through translation files.
+
+## 🌷 Managing the Catalog
+
+Products and wedding packages are managed through JavaScript data files.
+
+To add an item:
+
+1. Add its image to `public/images/`.
+2. Add the item to `src/data/products.js` or `src/data/packages.js`.
+3. Add its translation keys to both `ar.json` and `en.json`.
+4. Set its featured status if it should appear in the homepage's featured collection.
+
+## 🚀 Deployment
+
+Deployed on [Vercel](https://vercel.com/).
+
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
+
+## 👨‍💻 Developer
+
+**Gerges Nashaat**
+
+- [Portfolio](https://gergesnashaat.vercel.app/)
+- [GitHub](https://github.com/G3RGES)
+- [LinkedIn](https://www.linkedin.com/in/gergesnashaat/)
+
+---
+
+Designed and developed with care. 🌹
