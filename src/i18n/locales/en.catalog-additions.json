@@ -1,0 +1,163 @@
+{
+  "nav": {},
+  "products": {
+    "bridalWhiteBabyBreath": {
+      "name": "Pure Bridal",
+      "description": "A classic white rose bridal bouquet finished with delicate baby’s breath."
+    },
+    "classicWhiteBridal": {
+      "name": "Classic White Bridal",
+      "description": "A rounded white bridal bouquet for a timeless wedding look."
+    },
+    "ivoryRoseBridal": {
+      "name": "Ivory Rose Bridal",
+      "description": "Soft ivory roses arranged in an elegant bridal bouquet."
+    },
+    "pinkRoseCharm": {
+      "name": "Pink Rose Charm",
+      "description": "Pink roses and daisy-like blooms wrapped in soft pink paper."
+    },
+    "pinkLilyRomance": {
+      "name": "Pink Lily Romance",
+      "description": "A romantic arrangement of pink lilies and roses."
+    },
+    "blushLilyBouquet": {
+      "name": "Blush Lily Bouquet",
+      "description": "A full blush-toned bouquet with lilies and complementary flowers."
+    },
+    "redRoseClassic": {
+      "name": "Red Rose Classic",
+      "description": "Red roses paired with delicate baby’s breath."
+    },
+    "scarletPetalArrangement": {
+      "name": "Scarlet Petals",
+      "description": "A striking red rose arrangement with dramatic dark wrapping."
+    },
+    "goldenButterflyBouquet": {
+      "name": "Golden Butterfly",
+      "description": "A light bouquet accented with decorative golden butterflies."
+    },
+    "blushRoseElegance": {
+      "name": "Blush Rose Elegance",
+      "description": "White roses presented in soft pink wrapping."
+    },
+    "lilacGarden": {
+      "name": "Lilac Garden",
+      "description": "Purple tulips and daisy-like blooms in a lilac-toned arrangement."
+    },
+    "bluebellTulips": {
+      "name": "Bluebell Tulips",
+      "description": "A delicate blue-and-white tulip-inspired bouquet."
+    },
+    "crimsonLily": {
+      "name": "Crimson Lily",
+      "description": "Deep red lily-like blooms arranged in a bold bouquet."
+    },
+    "blueButterflyDream": {
+      "name": "Blue Butterfly Dream",
+      "description": "A blue-wrapped arrangement decorated with butterfly accents."
+    },
+    "rubyMix": {
+      "name": "Ruby Mix",
+      "description": "A vibrant mix of red and purple roses with fresh greenery."
+    },
+    "pinkGerberaBlush": {
+      "name": "Pink Gerbera Blush",
+      "description": "Soft pink gerbera-style blooms in a simple hand-tied bouquet."
+    },
+    "velvetRedBlooms": {
+      "name": "Velvet Red Blooms",
+      "description": "Deep red anthurium-like blooms in a dramatic arrangement."
+    },
+    "whiteCallaBridal": {
+      "name": "White Calla Bridal",
+      "description": "Elegant white calla lilies tied with a flowing white ribbon."
+    },
+    "whiteRoseBridal": {
+      "name": "White Rose Bridal",
+      "description": "A white rose bridal bouquet finished with a satin ribbon."
+    },
+    "ivoryRoseBridalScreenshot": {
+      "name": "Ivory Rose Bridal",
+      "description": "An ivory rose bridal bouquet with delicate finishing details."
+    },
+    "whiteTulipBridal": {
+      "name": "White Tulip Bridal",
+      "description": "A graceful white tulip bridal bouquet."
+    },
+    "pinkTulipDelight": {
+      "name": "Pink Tulip Delight",
+      "description": "Soft pink tulips wrapped in a translucent finish."
+    },
+    "ivoryRoseHandTied": {
+      "name": "Ivory Rose Hand-Tied",
+      "description": "White roses arranged with long green stems and a bridal ribbon."
+    },
+    "burgundyButterflyRoses": {
+      "name": "Burgundy Butterfly Roses",
+      "description": "A rich burgundy rose bouquet accented with butterflies and baby’s breath."
+    },
+    "whiteBeadedFan": {
+      "name": "White Beaded Fan",
+      "description": "A decorative white fan with delicate beaded details."
+    },
+    "laceWeddingFan": {
+      "name": "Lace Wedding Fan",
+      "description": "A white lace fan for wedding-day styling."
+    },
+    "classicLaceFan": {
+      "name": "Classic Lace Fan",
+      "description": "An ornate white lace fan with a satin bow."
+    },
+    "beadedFanDetail": {
+      "name": "Beaded Wedding Fan",
+      "description": "A beaded fan shown in a phone screenshot; a cleaner image is recommended."
+    },
+    "laceFanDetail": {
+      "name": "Lace Fan Detail",
+      "description": "A white lace fan shown in a phone screenshot; a cleaner image is recommended."
+    },
+    "bridalJewelryDetail": {
+      "name": "Bridal Accessory",
+      "description": "A bridal accessory shown in a phone screenshot; confirm the exact product before publishing."
+    },
+    "burgundyEdit": {
+      "name": "Burgundy Edit",
+      "description": "A rich burgundy rose bouquet arranged for a bold romantic statement."
+    },
+    "softRomance": {
+      "name": "Soft Romance",
+      "description": "Soft blush roses in a delicate, timeless arrangement."
+    },
+    "theClassic": {
+      "name": "The Classic",
+      "description": "An elegant white bouquet with a clean, classic finish."
+    },
+    "graduation": {
+      "name": "The Golden Milestone",
+      "description": "A joyful bouquet to celebrate a milestone worth remembering."
+    }
+  },
+  "packages": {
+    "burgundyWedding": {
+      "name": "Burgundy Wedding",
+      "description": "A romantic wedding floral setup featuring burgundy and blush tones."
+    },
+    "romanticWedding": {
+      "name": "Romantic Wedding",
+      "description": "A romantic floral arch and wedding backdrop in soft blush tones."
+    },
+    "goldFloralSign": {
+      "name": "Gold Floral Wedding Sign",
+      "description": "A decorative gold wedding sign accented with floral details."
+    },
+    "blackCrystalSign": {
+      "name": "Black Crystal Wedding Sign",
+      "description": "A personalized-style wedding sign with a black backdrop and crystal detailing."
+    },
+    "roundWhiteWeddingSign": {
+      "name": "Round White Wedding Sign",
+      "description": "A round wedding sign with white floral decoration."
+    }
+  }
+}

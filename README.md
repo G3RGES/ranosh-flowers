@@ -30,35 +30,6 @@ Built with React and Tailwind CSS, featuring an elegant visual design, smooth an
 - React Icons
 - Fontsource
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js
-- npm
-
-### Installation
-
-```bash
-git clone <your-repository-url>
-cd <your-project-folder>
-npm install
-npm run dev
-```
-
-Open the local URL provided by Vite.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
 
 ## 📁 Project Structure
 
